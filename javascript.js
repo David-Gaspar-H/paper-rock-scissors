@@ -12,9 +12,9 @@ function removeCompTransition(e) {
 function getCompChoice(){
     let rand = Math.floor(Math.random() * 3) + 1;
     let choice;
-    const rock = document.querySelector(".rock");
-    const scissors = document.querySelector(".scissors");
-    const paper = document.querySelector(".paper");
+    const rock = document.querySelector(".comp-rock");
+    const scissors = document.querySelector(".comp-scissors");
+    const paper = document.querySelector(".comp-paper");
     switch(rand){
         case 1:
             choice = "paper";
@@ -37,41 +37,26 @@ function getCompChoice(){
 }
 
 function round(userChoice,compChoice){
-    let choice;
     let result;
-    switch(userChoice.charAt(0).toLowerCase()){
-        case "r":
-            choice = "rock";
-            break;
-        case "p":
-            choice = "paper";
-            break;
-        case "s":
-            choice = "scissors";
-            break;
-        default:
-            choice = "rock"
-            break;
-    }
-    if (choice == compChoice){
+    if (userChoice == compChoice){
         result = "Dang, its a tie";
     }
-    if (choice == "rock" && compChoice == "scissors"){
+    if (userChoice == "rock" && compChoice == "scissors"){
         result = "You win! rock beats scissors";
     }
-    if (choice == "rock" && compChoice == "paper"){
+    if (userChoice == "rock" && compChoice == "paper"){
         result = "You lose! paper beats rock";
     }
-    if (choice == "paper" && compChoice == "rock"){
+    if (userChoice == "paper" && compChoice == "rock"){
         result = "You win! paper beats rock";
     }
-    if (choice == "paper" && compChoice == "scissors"){
+    if (userChoice == "paper" && compChoice == "scissors"){
         result = "You lose! scissors beat paper";
     }
-    if (choice == "scissors" && compChoice == "paper"){
+    if (userChoice == "scissors" && compChoice == "paper"){
         result = "You win! scissors beat paper";
     }
-    if (choice == "scissors" && compChoice == "rock"){
+    if (userChoice == "scissors" && compChoice == "rock"){
         result = "You lose! rock beats scissors";
     }
     return result;
@@ -100,6 +85,7 @@ function game(){
         console.log(`You win with ${userScore} points`);
     }
 }
+alert("Click on your choice and try to beat the computer")
 const rock = document.querySelector(".rock");
 const scissors = document.querySelector(".scissors");
 const paper = document.querySelector(".paper");

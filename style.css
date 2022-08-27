@@ -12,6 +12,7 @@ body{
     padding: 10px;
     font-size: 30px;
     text-align: center;
+    font-weight: bold;
 }
 
 .game-container{
@@ -20,7 +21,19 @@ body{
     justify-content: center;
     gap: 50px;
     background-color: #3B6393;
-    margin-top: 20%;
+    
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 2%;
+    border-radius: 10px;
+}
+.comp-game-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    background-color: #3B6393;
+    
     margin-left: 30%;
     margin-right: 30%;
     padding: 2%;
@@ -30,25 +43,50 @@ body{
 .button{
     height: 100px;
     width: auto;
-    transition: all .42s ease;
+    transition: all .55s ease;
     border-radius: 20px;
 }
 .playing{
     transform: scale(1.2);
-    background-color: green;
+    background-color: #E1C6D6;
 }
 .comp-playing{
     transform: scale(1.2);
-    background-color: red;
+    background-color: #E1C6D6;
 }
 .results{
     text-align: center;
     color: #3B6393;
     font-size: 25px;
+    border: 2px solid #3B6393;
+    margin-top: 10px;
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 5px;
+    font-weight: bold;
 }
 .footer{
     color: #3B6393;
     text-align: center;
     padding: 30px;
     margin-top: auto;
+}
+.container{
+    margin-top: 10%;
+    display: flex;
+    
+    flex-direction: column;
+}
+.text-user{
+    text-align: center;
+    color: #3B6393;
+    font-size: 25px;
+    font-weight: bold;
+}
+.text-comp{
+    margin-top: 20px;
+    text-align: center;
+    color: #3B6393;
+    font-size: 25px;
+    font-weight: bold;
 }
